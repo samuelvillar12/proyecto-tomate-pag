@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomate Fresco</title>
+    <link rel="stylesheet" href="./pagPrincipal.css"/>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon"/>
+</head>
+<body>
+    <header class="headerTienda">
+        <div class="box img">
+            <a href="./index.html">
+                <img src="./img/logo.png" alt="Tienda de tomate" style="width: 100px;">
+            </a>
+        </div>
+            
+        <div class="box Enlaces">
+            <a class="enlaces Pag"  href="./huerta.html">Nuestra Huerta</a> 
+            <a class="enlaces Pag"  href="./temporada.html">Tomates de Temporada</a> 
+            <a class="enlaces Pag" href="./regalo.html">Cestas de Regalo</a>
+            <a class="enlaces Pag"  href="./blog.html">El Blog del Tomate</a>
+        </div>
+
+        <div class="box boton">
+            <button  id="botonComprar">Comprar</button>
+            <section id="VentanaEmergente" class="ventanaClass">
+                <div class="mensajeEmergente">
+                    <h2>Oferta especial 🍅</h2>
+                    <p class="parrofoVentas">
+                        Aprovecha nuestros tomates frescos de la mejor calidad a un precio increíble.
+                    </p>    
+                        <ul class="listVenta">
+                            <li>✅ Recién cosechados</li>
+                            <li>✅ Frescos y naturales</li>
+                            <li>✅ Disponibles por tiempo limitado</li>
+                        </ul>
+                    <span class="parrofoVentas">    
+                     ¡Compra ahora y disfruta del mejor sabor!
+                    </span>
+                    <form>
+                        <label  for="seleccionarDeVenta"  value="Compre Productos">compre aquí</label>
+                        <select id="seleccionarDeVenta" value="Compre Productos">
+                                <option value="none" selected disabled hidden>Compre Productos</option>
+                                <option value="libras"> 10 a 30 Libras </option>
+                                <option value="Sacos"> 1 a 6 Sacos </option>
+                                <option value="transporte"> Por envio </option>
+                            
+                        </select>
+                         <label class="label libras" for="seleccionarDeVentaLibras"  value="Precio de las libras">Precio</label>
+                        <select id="seleccionarDeVentaLibras" value="Precio de los libras" style="padding-left: 41px;">
+                                <option value="none" selected disabled hidden>Escoja las libras</option>
+                                <option value="diez"> 10 libras = 200 RD$ </option>
+                                <option value="quince"> 15 libras = 700 RD$ </option>
+                                <option value="vente"> 20 libras = 1,200 RD$ </option>
+                                <option value="venticisco"> 25 libras = 1,800 RD$ </option>
+                                <option value="trenta"> 30 libras = 2,400 RD$ </option>
+                        </select> 
+                        <label class="label Sacos" for="seleccionarDeVentaSacos" value="Precio de los Sacos">Precios</label>
+                        <select id="seleccionarDeVentaSacos" value="Precio de los Sacos" style="padding-left: 51px; padding-right: 63px;">
+                                <option value="none" selected disabled hidden>Escoja los Sacos</option>
+                                <option value="Sacos2"> 2 Sacos = 3100 RD$ </option>
+                                <option value="Sacos3"> 3 Sacos = 5000 RD$ </option>
+                                <option value="Sacos4"> 4 Sacos = 6500 RD$ </option>
+                                <option value="Sacos5"> 5 Sacos = 7200 RD$</option>
+                                <option value="Sacos6"> 6 Sacos = 8500 RD$ </option>
+
+                        </select>
+                        <label class="label transporte" for="seleccionarDeVentaTransport" value="Precio del envio">Precio</label>
+                        <select id="seleccionarDeVentaTransport" value="Precio del envio" style="padding-right: 37px; padding-left: 18px;">
+                                <option value="none" selected disabled hidden> El envio sera de 7 > 25 Sacos </option>
+                                <option value="7sacos"> 7 Sacos = 10,000 RD$ </option>
+                                <option value="10sacos"> 10 Sacos = 12,500 RD$ </option>
+                                <option value="15sacos"> 15 Sacos = 15,000 RD$ </option>
+                                <option value="20sacos"> 20 Sacos = 17,000 RD$ </option>
+                                <option value="25sacos"> 25 Sacos = 20,000 RD$ </option>
+                        </select>       
+                    </form> 
+                    <p class="TEXTventa"></p>
+                    <span id="InsertarTextoDeVenta">
+                       
+                    </span>
+                        
+                    <button class="box botonSalir">Salir</button>
+                    
+                </div>
+            </section > 
+        </div>
+    </header>
+    <main>
+        <section class="contenidoUno">
+            <div>
+                <article class="padre article">
+                    <h1 >Bienvenido  a Nuestra Tienda Online de <span class="animar title">Tomate Fresco</span></h1>
+                    <h2 style="margin: 11px;">Del Campo a tu Mano con Calidad.</h2>
+                    <h3 class="parrofo title"><strong>¡Bienvenido/a!</strong></h3>
+                    <p class="parrofo">Descubre la frescura, el sabor y la calidad de nuestros tomates. Explora nuestras variedades, conoce sus beneficios y encuentra la mejor inspiración para disfrutar de este increíble fruto.
+                    </p> 
+                    <!-- <br> -->
+                    <p class="parrofo">
+                    ¡Gracias por visitarnos!
+                    </p>
+                </article>
+            </div>
+            <div>
+                <img src="./img/logo.png" alt="logo de la Tienda" style="width: 500px;">
+            </div>
+
+        </section>
+        <section class="contenidoDos contenedor">
+            <div class="presentaciones Texto">
+                <article class="father article">
+                    <h2>Nuestros Productos</h2>
+                    <p class="parrofoTwo">En nuestra tienda encontrarás una amplia selección de tomates frescos, cultivados con dedicación y cuidadosamente seleccionados para ofrecer la mejor calidad. Cada producto conserva su sabor natural, su frescura y los nutrientes que lo hacen ideal para cualquier receta. </p>
+                    <p class="parrofoTwo">Ya sea para preparar ensaladas, salsas, guisos o cualquier otro plato, nuestros tomates son la opción perfecta para llevar frescura y sabor a tu mesa. Explora nuestro catálogo y elige los productos que mejor se adapten a tus necesidades.</p>
+                </article>
+            </div>
+            <div class="presentaciones Imagen">
+                <figure class="figureIMG">
+                    <img id="imagenPresentacion" src="./img/tomate1.jpg" alt="productos de la tienda">
+                    <figcaption class="figcaptionImg">Productos de nuestra tienda</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!--pie del documento en contiendo de la tienda wed -->
+
+    </footer>
+    <script src="./js/img-presentacion.js"></script>
+    <script src="./js/pagPrincipal.js "></script>
+</body>
+</html>

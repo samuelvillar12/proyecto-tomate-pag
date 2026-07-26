@@ -1,0 +1,173 @@
+@font-face {
+    font-family:"Comics-neueTwo" ;
+    src: url(./font/ComicNeue-Bold.ttf);
+}
+@font-face {
+    font-family: "Comics-neueONE";
+    src: url(./font/ComicNeue-BoldItalic.ttf);
+}
+
+* {
+    outline: 2px solid red;
+}
+.headerTienda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 15px;
+    font-family: "Comics-neueONE";
+    font-size: 125%;
+} 
+
+.box.Enlaces {
+    display: flex;
+    margin: 15px 5px;
+    padding: 10px;
+    flex: 0 1 863px; 
+    justify-content: space-evenly;
+}
+
+.enlaces.Pag {
+border: 1px ;
+border-radius: 5px;
+color: black;
+text-decoration: none;
+}
+.box.boton {
+    margin: 15px;
+    padding: 11px;
+    margin-right: 55px;
+}
+#botonComprar, .box.botonSalir {
+    padding: 10px;
+    border-radius: 14px;
+    border: 0px; 
+    background-color: #008d00; 
+    color: white;
+    font-size:94%;
+    font-family: "Comics-neueONE";
+}
+body {
+    background-image: url("./img/couleur-tomatoes-1280859_1920.jpg"); 
+}
+.box.img {
+    margin-left: 40px ;
+}
+.contenidoUno, .contenidoDos { 
+
+    background-color: hsla(0, 0%, 100%, 0.5);
+    display:flex;
+    justify-content: space-between;
+
+    padding: 25px;
+    margin-top: 60px;
+    border-radius: 20px;
+    align-items: center;
+}
+.padre.article, .father.article{
+    font-family: "Comics-neueTwo" ;
+    font-size: 125%; 
+    display: flex;
+    flex-direction: column;
+    margin-right: 72px;
+
+}
+.padre.article .parrofo, .parrofoTwo, .parrofoVentas{
+    margin: 11px;
+    text-align: justify;
+}
+
+.contenidoDos.contenedor {
+    flex-direction: row-reverse;
+    margin-top: 30px;
+    padding: 31px ;
+    align-items: center;
+   
+}
+.presentaciones.Texto{
+margin-right: 2px;
+  margin-left: -41px;
+  flex: 0 1 auto;
+  padding: 32px 0px;
+}
+
+#imagenPresentacion{
+  
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  width: 412px;
+  border-radius: 22px;
+}
+
+ .figcaptionIMG {
+    font-family: "Comics-neueTwo";
+}
+
+.presentaciones.Imagen{
+   margin-top: -10px;
+    margin-right: 120px;
+}
+.ventanaClass {
+    display: none;
+    
+      position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        justify-content: center;
+        align-items: center;
+}
+.mensajeEmergente{
+background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: justify;
+    margin-top: 65px;
+    margin-left: 250px;
+    margin-right: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#seleccionarDeVenta,
+#seleccionarDeVentaLibras,
+#seleccionarDeVentaSacos, 
+#seleccionarDeVentaTransport{
+    padding: 3px 65px;
+  margin: 18px;
+  border-radius: 10px;
+  background: #D5303E;
+  color: white;
+  font-size: medium;
+  border: 0px;
+  font-family: "Comics-neueTwo";
+}
+
+.box.botonSalir{
+margin-top: 22px;
+  padding: 9px 17px;
+}
+#seleccionarDeVentaLibras,
+#seleccionarDeVentaSacos, 
+#seleccionarDeVentaTransport{
+    display: none;
+    margin-left: auto;
+}
+.label{
+    display: none;
+    margin-bottom: -42px;
+}
+ul {
+    list-style-type: none;
+}
+.mensajeEmergente .parrofoVentas {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.presentaciones.Texto .father.article{
+    font-size: 150%;
+}
