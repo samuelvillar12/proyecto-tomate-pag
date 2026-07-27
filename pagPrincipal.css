@@ -171,3 +171,13 @@ ul {
 .presentaciones.Texto .father.article{
     font-size: 150%;
 }
+.contenidoCarrito {
+    /* position: fixed;
+    right: 10px;
+    top: 26px;
+    display: none; */
+}
+.contenidoCarrito .boxCarrito {
+    /* background-color: hsla(0, 0%, 100%, 0.5); */
+    border-radius: 23px;
+}
