@@ -181,3 +181,54 @@ ul {
     /* background-color: hsla(0, 0%, 100%, 0.5); */
     border-radius: 23px;
 }
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    background-color: #1B5E20;
+    color: white;
+    font-size: 20px;
+    justify-content: space-between;
+     margin-top: 45px;
+     border-radius: 25px ;
+     font-family:"Comics-neueTwo";
+     padding-bottom: 65px;
+}
+
+
+.footer-enlaces{
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer-enlaces .enlaces {
+    margin-bottom: 11px;
+    text-decoration: none;
+    font-family:"Comics-neueONE";
+}
+.columnaFooter.logo {
+    margin-left: 11px ;
+    
+}
+.footer-enlaces .enlaces:link {
+    color:white;
+}
+
+.footer-enlaces .enlaces:visited{ 
+    color:white ;
+}
+.iconofooter{
+    width: 20px;
+    margin-bottom:-2px;
+}
+.footer-copy{
+position: absolute;
+    bottom: -695px;
+    left: 440px;
+    right: 443px;
+}

@@ -13,11 +13,23 @@ const VentaInsertada = document.getElementById("InsertarTextoDeVenta")
 const textoVenta = document.querySelector(".TEXTventa")
 const CarritoCompra = document.querySelector(".contenidoCarrito")
 const imagenesCarrito= [
-     "img/carrito1.png",
-     "img/carrito2.png",
-     "img/carrito3.png",
-     "img/carrito4.png",
-     "img/carrito5.png"
+     "img/carrito1.png", //0
+     "img/carrito2.png", //1
+     "img/carrito3.png", //2
+     "img/carrito4.png", //3
+     "img/carrito5.png", //4
+     "img/camion0.png", //5
+     "img/camion1.png", //6
+     "img/camion2.png", //7
+     "img/camion3.png", //8
+     "img/camion4.png", //9
+     "img/camion5.png", //10
+     "img/saco0.png", //11
+     "img/saco1.png", //12
+     "img/saco2.png", //13
+     "img/saco3.png", //14
+     "img/saco4.png", //15
+     "img/saco5.png", //16
 ]
 const MostrarCarrito = document.getElementById("imgcarrito") 
 
@@ -125,7 +137,7 @@ function EleccionVenta (elemento){
              selectVenta.style.background = "grey"
              selectSacos.style.display ="block"
              labelSacos.style.display = "block"   
-          
+               mostrarContadorDeImag(11)
            
           break;
           case "transporte":
@@ -133,7 +145,7 @@ function EleccionVenta (elemento){
              selectVenta.style.background = "grey"
              selectTransport.style.display ="block"
              labelTransporte.style.display = "block"
-                       
+               mostrarContadorDeImag(5)
           break;
      } 
   }     
@@ -144,29 +156,27 @@ function Eliccionlibras (elemento){
           case "diez":
                textoVenta.textContent = "Haz comprado 10 libras por 200 RD$. Diríjase a la sucursal de Tomate fresco mas cerca" 
                VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'      
-               
-              Carrito(0)
+               mostrarContadorDeImag(0)
           break;
           case "quince":
               textoVenta.textContent = "Haz comprado 15 libras por 700 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
-              
-               Carrito(1)
+               mostrarContadorDeImag(1)
           break;
           case "vente":
               textoVenta.textContent = "Haz comprado 20 libras por 1,200 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
-               Carrito(2)
+               mostrarContadorDeImag(2)
           break;
           case "venticisco":
               textoVenta.textContent = "Haz comprado 25 libras por 1,800 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
-               Carrito(3)
+               mostrarContadorDeImag(3)
           break;
           case "trenta":
               textoVenta.textContent = "Haz comprado 30 libras por 2,400 RD. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'    
-          Carrito(4)
+               mostrarContadorDeImag(4)
           break;
      }
   }     
@@ -178,26 +188,31 @@ function EliccionSacos (elemento){
               textoVenta.textContent = "Haz comprado 2 sacos por 3,100 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                CarritoCompra.style.display = "block"
+               mostrarContadorDeImag(12)
           break;
           case "Sacos3":
                textoVenta.textContent = "Haz comprado 3 sacos por 5,000 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
                VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                 CarritoCompra.style.display = "block"
+                mostrarContadorDeImag(13)
           break;
           case "Sacos4":
               textoVenta.textContent =  "Haz comprado 4 sacos por 6,500 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                CarritoCompra.style.display = "block"
+               mostrarContadorDeImag(14)
           break;
           case "Sacos5":
               textoVenta.textContent = "Haz comprado 5 sacos por 7,200 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                CarritoCompra.style.display = "block"
+               mostrarContadorDeImag(15)
           break;
           case "Sacos6":
                textoVenta.textContent = "Haz comprado 6 sacos por 8,500 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
                VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                 CarritoCompra.style.display = "block"
+                mostrarContadorDeImag(16)
           break;
          
      }
@@ -209,31 +224,36 @@ function EliccionTransport (elemento){
               textoVenta.textContent = "Haz comprado 7 sacos por 10,000 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                CarritoCompra.style.display = "block"
+               mostrarContadorDeImag(6)
           break;
           case "10sacos":                 
                textoVenta.textContent = "Haz comprado 10 sacos por 12,500 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
                VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                 CarritoCompra.style.display = "block"
+                mostrarContadorDeImag(7)
           break;
           case "15sacos" :                 
                textoVenta.textContent = "Haz comprado 15 sacos por 15,000 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
                VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                 CarritoCompra.style.display = "block"
+                mostrarContadorDeImag(8)
           break;
           case "20sacos":                 
                textoVenta.textContent = "Haz comprado 20 sacos por 17,000 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
                VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                 CarritoCompra.style.display = "block"
+                mostrarContadorDeImag(9)
           break;                 
           case "25sacos":
                textoVenta.textContent = "Haz comprado 25 sacos por 20,000 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
                VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
                 CarritoCompra.style.display = "block"
+                mostrarContadorDeImag(10)
           break;
      }
   }     
 
-function Carrito (pararBucle){
+function mostrarContadorDeImag (pararBucle){
      
  for (let contador = 0; imagenesCarrito.length >= contador ; contador++ ){
     if (contador == pararBucle){
