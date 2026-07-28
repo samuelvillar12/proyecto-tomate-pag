@@ -49,7 +49,7 @@ BotonSalir.addEventListener("mouseout", () => {
      BotonSalir.style.color= ''
 } )
 
-botonHeader.addEventListener("mouseover", (e) => {
+botonHeader.addEventListener("mouseover", () => {
 
 
       if ("mouseover") {
@@ -144,37 +144,29 @@ function Eliccionlibras (elemento){
           case "diez":
                textoVenta.textContent = "Haz comprado 10 libras por 200 RD$. Diríjase a la sucursal de Tomate fresco mas cerca" 
                VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'      
-               CarritoCompra.style.display = "block"
-              
-               console.log(Carrito(0))
+               
+              Carrito(0)
           break;
           case "quince":
               textoVenta.textContent = "Haz comprado 15 libras por 700 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
-               CarritoCompra.style.display = "block" 
-               
-               console.log(Carrito(1))
+              
+               Carrito(1)
           break;
           case "vente":
               textoVenta.textContent = "Haz comprado 20 libras por 1,200 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
-              CarritoCompra.style.display = "block"
-              
-              console.log(Carrito(2))
+               Carrito(2)
           break;
           case "venticisco":
               textoVenta.textContent = "Haz comprado 25 libras por 1,800 RD$. Diríjase a la sucursal de Tomate fresco mas cerca"
               VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
-                CarritoCompra.style.display = "block"
-             
-               console.log(Carrito(3))
+               Carrito(3)
           break;
           case "trenta":
               textoVenta.textContent = "Haz comprado 30 libras por 2,400 RD. Diríjase a la sucursal de Tomate fresco mas cerca"
-              VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'
-              CarritoCompra.style.display = "block"
-               
-               console.log(Carrito(4))
+              VentaInsertada.innerHTML = '<a class="enlaces Pag" href="./codigoDelaVentaUser.html">Tu codigo de la venta</a>'    
+          Carrito(4)
           break;
      }
   }     
