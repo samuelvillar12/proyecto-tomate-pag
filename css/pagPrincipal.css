@@ -1,14 +1,14 @@
 @font-face {
     font-family:"Comics-neueTwo" ;
-    src: url(./font/ComicNeue-Bold.ttf);
+    src: url(../font/ComicNeue-Bold.ttf);
 }
 @font-face {
     font-family: "Comics-neueONE";
-    src: url(./font/ComicNeue-BoldItalic.ttf);
+    src: url(../font/ComicNeue-BoldItalic.ttf);
 }
 
 * {
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 .headerTienda {
     display: flex;
@@ -49,7 +49,7 @@ text-decoration: none;
     font-family: "Comics-neueONE";
 }
 body {
-    background-image: url("./img/couleur-tomatoes-1280859_1920.jpg"); 
+    background-image: url("../img/couleur-tomatoes-1280859_1920.jpg"); 
 }
 .box.img {
     margin-left: 40px ;

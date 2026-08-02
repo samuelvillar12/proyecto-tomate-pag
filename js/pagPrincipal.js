@@ -66,8 +66,7 @@ botonHeader.addEventListener("mouseover", () => {
 
       if ("mouseover") {
      botonHeader.style.background = "#06ce06"
-      botonHeader.style.color = "black"
-      botonHeader.style.border = "0px" 
+      botonHeader.style.color = "black" 
      } })
 botonHeader.addEventListener("mouseout", () => {
          if ("mouseout" ) 
@@ -83,30 +82,20 @@ mouseSobreComprar()
 
 // Por cada evento del Mouse sobre los enlaces hay un color asignado segun el evento que esté ocurriendo
 boxEnlaces.forEach( (enlace) => { 
-    enlace.addEventListener("mouseover",() => {
-     Movermouse(enlace, "#D5303E", "white")
-    }
 
-)
-     enlace.addEventListener("mouseout",() => {
-           Dejarmouse(enlace, "", "black")
-     })
-     enlace.addEventListener("click", () => {
-          clickmouse(enlace, "#008d00")
-     })
+ ModificarEnlaces(enlace, "mouseover", "#D5303E", "white")
+ ModificarEnlaces(enlace, "mouseout", "", "black")
+ ModificarEnlaces(enlace, "click", "#008d00")
+
 });
 
-function Dejarmouse(elemento,backgroundcolor, textColor) {
-elemento.style.background = `${backgroundcolor}`;
-elemento.style.color = `${textColor}`
-}
-function clickmouse(elemento,backgroundcolor, textColor) {
-elemento.style.background = `${backgroundcolor}`;
-elemento.style.color = `${textColor}`
-}
-function Movermouse(elemento,backgroundcolor, textColor) {
-elemento.style.background = `${backgroundcolor}`;
-elemento.style.color = `${textColor}`
+
+function ModificarEnlaces(elemento, evento, fondo, color){
+     elemento.addEventListener(evento, () => {
+          elemento.style.color = color
+          elemento.style.background = fondo  
+     }
+   )
 }
 
 selectVenta.addEventListener("change"/*cambiar, es el evento para select, algunos inputs (un input de texto y checkbox)*/, ()=> {
