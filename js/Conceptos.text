@@ -1,0 +1,25 @@
+
+Fecha  6/8/2026
+========================================================================================
+
+ Atributos data
+js
+HTML.setAttribute("data-theme", theme)
+
+Los atributos data-* son atributos HTML personalizados pensados para guardar información extra sin inventar atributos no estándar. Aquí data-theme="dark" o data-theme="light" le dice al CSS qué variables/estilos aplicar.
+=====================================================================================================================
+
+localStorage
+js
+localStorage.setItem("theme", theme)
+const savedTheme = localStorage.getItem('theme')
+
+API del navegador para guardar datos de forma persistente (sobrevive a recargar la página o cerrar el navegador), a diferencia de sessionStorage que se borra al cerrar la pestaña. Aquí se usa para recordar la preferencia del usuario entre visitas.
+=====================================================================================================================
+
+
+window.matchMedia
+js
+window.matchMedia("(prefers-color-scheme: dark)").matches
+
+Permite consultar en JS una media query de CSS. prefers-color-scheme detecta si el sistema operativo del usuario tiene activado el modo oscuro. .matches devuelve true o false. Es el mecanismo estándar para respetar la preferencia del sistema cuando el usuario no ha elegido nada manualmente.

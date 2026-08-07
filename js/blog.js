@@ -1,61 +1,96 @@
-const EnlacesHeader = document.querySelectorAll(".headerEnlaces") //Seleciono a los enlaces del Header
-const ImagenesModos =[
-    "img/modo-claro.png",
-    "img/modo_nocturno_blanco.png"
-];
-const ImagenModo = document.getElementById("modo")
+// ===============================
+// LÓGICA DEL MODO CLARO Y OSCURO
+// ===============================
+
+// Obtiene el elemento raíz del documento (<html>).
+// Aquí se agregará el atributo data-theme para cambiar los estilos.
+
+const HTML = document.documentElement 
 
 
+// Busca el botón encargado de cambiar el tema.
+// El botón debe tener el atributo: data-theme-toggle
+const BotonToggle = document.querySelector("[data-theme-toggle]")
 
-EnlacesHeader.forEach(enlace => { 
-    modificarEnlaces(enlace, "white", "#D5303E", "mouseover")
-    modificarEnlaces(enlace, "", "", "mouseout")
+
+// ---------------------------------------------
+// Función para aplicar el tema seleccionado
+// ---------------------------------------------
+const setTheme = theme => { 
+     // Agrega o actualiza el atributo data-theme del elemento <html>.
+    // Ejemplo:
+    // <html data-theme="dark">
+    // <html data-theme="light">
+    HTML.setAttribute("data-theme", theme)
+
+    // Guarda la preferencia del usuario en el navegador,
+    // para mantener el mismo tema cuando vuelva a abrir la página.
+    localStorage.setItem("theme",theme)
+}
+
+// Obtiene el tema almacenado anteriormente.
+// Si nunca se ha guardado uno, devolverá null.
+const savedTheme = localStorage.getItem('theme')
+
+// ------------------------------------------------------
+// Configuración inicial del tema al cargar la página
+// ------------------------------------------------------
+
+// Si existe un tema guardado por el usuario,
+// se utiliza ese tema.
+if (savedTheme){
+    setTheme(savedTheme)
+
+// Si no existe un tema guardado,
+// se verifica la preferencia del sistema operativo.
+} else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
     
+    // Si el sistema está en modo oscuro,
+    // se aplica automáticamente.
+    setTheme('dark')
+
+} else {
+
+    // En caso contrario,
+    // el tema predeterminado será claro.
+    setTheme("light")
+}
+
+// ------------------------------------------------------
+// Evento para cambiar entre modo claro y oscuro
+// ------------------------------------------------------
+
+// Escucha el click sobre el botón de cambio de tema.
+BotonToggle.addEventListener("click", ()=>{
+    
+    // Obtiene el tema actualmente aplicado.
+    const current = HTML.getAttribute("data-theme");
+
+    // Si el tema actual es oscuro,
+    // cambia a claro.
+    // Si es claro,
+    // cambia a oscuro.
+    const newTheme = current === "dark" ? "light" : "dark" ;
+    
+    // Aplica el nuevo tema y lo guarda en localStorage.
+    setTheme(newTheme)
 });
-
-function modificarEnlaces(elemento, color, fondo,evento){
-    elemento.addEventListener(evento, () => {
-        elemento.style.color = color
-        elemento.style.background = fondo
-    } )
-
-}
-CambioModo(ImagenModo, "click", 1, "#121212", "#330000", "#DFDDDD" )
-CambioModo(ImagenModo, "dblclick", 0, "#FFF8E7" ,"#DFDDDD","#330000")
+//
 
 
-function CambioModo (elemento, evento, arreglo, UnoFondo, DosFondo, UnoColor ){
-    const body= document.querySelector("body")
-    const contenidos = document.querySelectorAll(".contenido")
-    const Header = document.querySelector(".headerBlog")
-    const footer = document.querySelector("footer")
+
+const BotonOcultarSection = document.getElementById("botonOcultarSectionNav")
+ocultaNavSection( BotonOcultarSection, "click","block")
+ocultaNavSection(BotonOcultarSection, "dblclick", "none")
+function ocultaNavSection(elemento, evento, valor  ){
     
- elemento.addEventListener(evento, ()=>{
-    
-    elemento.src = ImagenesModos[arreglo]
-    body.style.background =  UnoFondo
-    Header.style.background = DosFondo
-    body.style.color = UnoColor
-    document.getElementById("OcultarSectionNav").src = "img/grid_blanco.png"
-    contenidos.forEach((contenido) =>{
-     contenido.style.background = DosFondo
-    })
- })   
-}
-ocultaNavSection("click", "block", 1)
-ocultaNavSection("dblclick", "none", 0)
-
-function ocultaNavSection( evento, Valor1, array){
-    const ImagOcultarSection = document.getElementById("OcultarSectionNav")
     const SectionNav = document.querySelector(".contenido.navegacion")
 
-    const arreglo =[
-        "img/grid.png",
-        "img/sidebar.png"
-    ]
-    ImagOcultarSection.addEventListener(evento, () => {
-        SectionNav.style.display = Valor1
-        ImagOcultarSection.src = arreglo[array]
+    
+    elemento.addEventListener(evento, () => {
+        SectionNav.style.display = valor
+    
+   
     })
     
 }

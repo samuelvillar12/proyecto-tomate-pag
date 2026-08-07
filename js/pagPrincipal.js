@@ -1,5 +1,5 @@
 const botonHeader = document.getElementById("botonComprar"); 
-const boxEnlaces = document.querySelectorAll(".enlaces.Pag") ;     
+     
 const BotonSalir =   document.querySelector(".box.botonSalir")
 const selectVenta = document.querySelector("#seleccionarDeVenta"); //Si quiero la etiqueta select con sus opctions, es un solo node que necesito y ese node es la etiqueta <select> y no necesito usar querySelectAll() ni un forEach, excesion si quiero seleccionar a varias etiquetas de mismo tipo necesito usar querySelectAll() y un forEach   
 // Por cada evento del Mouse sobre el boton de "Comprar" hay un color asignado segun el evento que este ocurriendo
@@ -80,23 +80,6 @@ mouseSobreComprar()
 // NuevoTituloDos.appendChild(ntdTexto)
 
 
-// Por cada evento del Mouse sobre los enlaces hay un color asignado segun el evento que esté ocurriendo
-boxEnlaces.forEach( (enlace) => { 
-
- ModificarEnlaces(enlace, "mouseover", "#D5303E", "white")
- ModificarEnlaces(enlace, "mouseout", "", "black")
- ModificarEnlaces(enlace, "click", "#008d00")
-
-});
-
-
-function ModificarEnlaces(elemento, evento, fondo, color){
-     elemento.addEventListener(evento, () => {
-          elemento.style.color = color
-          elemento.style.background = fondo  
-     }
-   )
-}
 
 selectVenta.addEventListener("change"/*cambiar, es el evento para select, algunos inputs (un input de texto y checkbox)*/, ()=> {
      EleccionVenta( selectVenta.value)// elemento.value para poder usar el switch (===) para una <selects>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,11 @@
     <Header class="headerBlog">
         
         <div class="box logo">
-            <img src="./img/grid.png" alt="" width="40px" style="margin: left 6px; ;" id="OcultarSectionNav">
+            
+            <button id="botonOcultarSectionNav">
+                <img src="./img/grid.png" alt="" width="40px" style="margin: left 6px; ;" id="OcultarSectionNav">
+            <img src="./img/grid_blanco.png" alt="" width="40px" style="margin: left 6px; ;" id="OcultarSectionNavWhite">
+            </button>
             <img src="./img/logo.png" alt="Tienda de tomate" style="width: 100px;">
         </div>
         <div class="box">
@@ -19,10 +23,17 @@
         </div>
         <div class="box search">
             <label for="search-heard" class="label-search">Buscar:</label>
-            <input id="search-heard" type="search" value="Buscar aquí">
+            <input list="resultados" id="search-heard" size="30px" type="search" placeholder="Buscar aquí" pattern="[a-z]{1-12}">
+            <datalist id="resultados">
+               <option value="La importancia del tomate en la alimentación diaria"></option>
+               <option value="¿Cómo elegir un tomate fresco y de calidad?"></option>
+              <option value="Curiosidades del tomate que probablemente no conocías"></option>
+            </datalist>
         </div>
         <div class="box image">
-            <img src="./img/modo-claro.png" alt="" id="modo" width="35px">
+        <button aria-label data-theme-toggle>
+            <img src="./img/modo-claro.png" alt="modo claro de la pagina"  width="35px" id="modo-claro">
+            <img src="./img/modo_nocturno_blanco.png" alt="modo claro de la pagina"  width="35px" id="modo-oscuro"></button> 
         </div>
         <nav class="box enlaces">
             <!-- enlaces de la tienda wed -->
@@ -54,35 +65,56 @@
         
         <section class="contenido principal">
            <h1>Bienvenido al blog del Tomate.</h1>
-           <P>Aqui sabras de todo sobre el apacionante mundo del Tomate </P>
+           <P style="margin-left: 155px; margin-right: 155px  ;">Aqui sabras de todo sobre el apacionante mundo del Tomate </P>
             <br>
             <article class="articulo">
+               <div class="Box style">
                 <h2>La importancia del tomate en la alimentación diaria</h2>
                 <p>El tomate es uno de los alimentos más consumidos en el mundo gracias a su versatilidad, sabor y valor nutricional. Puede disfrutarse fresco en ensaladas, cocinado en sopas, salsas o como ingrediente principal de innumerables recetas.</p>
                 <p>El tomate es uno de los alimentos más consumidos en el mundo gracias a su versatilidad, sabor y valor nutricional. Puede disfrutarse fresco en ensaladas, cocinado en sopas, salsas o como ingrediente principal de innumerables recetas.</p>
+                <figure class="MarcoDeImag">
+                    <img class="img-blog" src="./img/Blog.jpg" alt="tomates" >
+                    <figcaption> Dr. Fulanito:<em>Uno tomate a diario</em></figcaption>
+                </figure>
                 <p>Su bajo contenido calórico lo convierte en una opción ideal para quienes desean mantener una alimentación equilibrada. Al mismo tiempo, su alto contenido de agua contribuye a la hidratación y su fibra favorece una buena digestión.</p>
                 <p>Incluir tomates en la dieta diaria es una forma sencilla de disfrutar de un alimento saludable, económico y lleno de sabor. Ya sea en una ensalada fresca, una salsa casera o un jugo natural, el tomate siempre aporta beneficios y un excelente valor nutricional.</p>
                 <p></p>
                 <br>
+               </div>
             </article>
             <article class="articulo">
+              <div class="Box style">
                 <h2>¿Cómo elegir un tomate fresco y de calidad?</h2>
                 <p>Escoger un buen tomate puede marcar la diferencia en el sabor de cualquier receta. Aunque todos parecen similares a simple vista, existen algunas características que permiten identificar un tomate fresco y de excelente calidad.</p>
                 <p>El primer aspecto a observar es el color. Un tomate maduro presenta un tono uniforme e intenso, sin manchas oscuras ni zonas verdes excesivas. También debe tener una piel lisa y brillante, libre de golpes o arrugas.</p>
                 <p>Al sostenerlo en la mano, debe sentirse firme pero ligeramente flexible al presionarlo con suavidad. Si está demasiado duro, probablemente aún no ha alcanzado su punto óptimo de maduración; si está demasiado blando, puede estar pasado.</p>
+                <figure class="MarcoDeImag">
+                    <img class="img-blog" src="./img/Blog2.jpg" alt="tomates" >
+                    <figcaption> Dr. Fulanito:<em>Uno tomate a diario</em></figcaption>
+                </figure>
                 <p>Otro detalle importante es el aroma. Un tomate fresco desprende un olor agradable y característico cerca del tallo. Este aroma suele ser una señal de buen sabor y madurez.</p>
                 <p>Conservar los tomates a temperatura ambiente ayuda a mantener su textura y sabor. Solo es recomendable refrigerarlos cuando estén muy maduros y no vayan a consumirse de inmediato.</p>
                 <p>Elegir tomates de calidad garantiza platos más sabrosos y una mejor experiencia en la cocina.</p>
                 <br>
+              </div> 
             </article>
+
            <article class="articulo">
-            <h2>Curiosidades del tomate que probablemente no conocías</h2>
-            <p>El tomate tiene una historia fascinante que va mucho más allá de la cocina. Aunque muchas personas lo consideran una verdura, desde el punto de vista botánico es una fruta, ya que se desarrolla a partir de la flor de la planta y contiene semillas.</p>
-            <p>Su origen se encuentra en América, donde era cultivado por pueblos indígenas mucho antes de llegar a Europa en el siglo XVI. Con el paso del tiempo, se convirtió en un ingrediente indispensable de la gastronomía de numerosos países.</p>
-            <p>Actualmente existen miles de variedades de tomates. Se pueden encontrar de diferentes tamaños, formas y colores, incluyendo rojos, amarillos, naranjas, verdes, morados e incluso casi negros. Cada variedad posee características únicas de sabor y textura.</p>
-            <p>El tomate es uno de los cultivos más importantes del mundo debido a su alta demanda y a la enorme cantidad de productos que se elaboran con él, como salsas, purés, kétchup, jugos y conservas.</p>
-            <p>Gracias a su sabor, sus propiedades nutricionales y su enorme diversidad, el tomate sigue siendo uno de los alimentos más apreciados tanto por productores como por consumidores en todo el planeta.</p>
-           </article>
+              <div class="Box style">
+                <h2>Curiosidades del tomate que probablemente no conocías</h2>
+                <p>El tomate tiene una historia fascinante que va mucho más allá de la cocina. Aunque muchas personas lo consideran una verdura, desde el punto de vista botánico es una fruta, ya que se desarrolla a partir de la flor de la planta y contiene semillas.</p>
+                <p>Su origen se encuentra en América, donde era cultivado por pueblos indígenas mucho antes de llegar a Europa en el siglo XVI. Con el paso del tiempo, se convirtió en un ingrediente indispensable de la gastronomía de numerosos países.</p>
+
+                <figure class="MarcoDeImag">
+                    <img class="img-blog" src="./img/Blo3.jpg" alt="tomates" >
+                    <figcaption> Dr. Fulanito:<em>Uno tomate a diario</em></figcaption>
+                </figure>
+
+                <p>Actualmente existen miles de variedades de tomates. Se pueden encontrar de diferentes tamaños, formas y colores, incluyendo rojos, amarillos, naranjas, verdes, morados e incluso casi negros. Cada variedad posee características únicas de sabor y textura.</p>
+                <p>El tomate es uno de los cultivos más importantes del mundo debido a su alta demanda y a la enorme cantidad de productos que se elaboran con él, como salsas, purés, kétchup, jugos y conservas.</p>
+                <p>Gracias a su sabor, sus propiedades nutricionales y su enorme diversidad, el tomate sigue siendo uno de los alimentos más apreciados tanto por productores como por consumidores en todo el planeta.</p>
+             </div>
+            </article>
         </section>
         <section class="contenido">
             <!-- contenido anterior -->

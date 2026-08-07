@@ -8,13 +8,57 @@
     src: url(../font/ComicNeue-Bold.ttf);
 }
 
+
+/* ==========================================================
+   VARIABLES CSS PARA EL SISTEMA DE TEMAS (LIGHT / DARK)
+
+   El atributo data-theme se agrega al elemento <html> desde
+   JavaScript. Dependiendo de su valor ("light" o "dark"),
+   estas variables cambian automáticamente los colores de
+   toda la aplicación sin modificar cada regla CSS.
+
+   Ejemplo:
+   <html data-theme="light">
+   <html data-theme="dark">
+========================================================== */
+
+
+/* ==========================================================
+   TEMA CLARO
+   Se aplicará cuando:
+   <html data-theme="light">
+========================================================== */
+
+/* Variables globales del tema
+
+--fondoBody       → Fondo principal del sitio.
+--fondoContenido  → Fondo del contenedor principal.
+--fondoArticulo   → Fondo de tarjetas, artículos o secciones.
+--textoColor      → Color predeterminado del texto.
+--colorEnlaces    → Color de enlaces y elementos interactivos.
+*/
+[data-theme= "light" ] {
+    --fondoBody: #FFF8E7;
+    --fondoContenido: #DFDDDD ;
+    --fondoArticulo : hsl(0, 0%, 71%);
+    --textoColor: #330000;
+    --colorEnlaces:#092039;
+}
+[data-theme= "dark"]{
+    --fondoBody: #121212;
+    --fondoContenido: #330000 ;
+    --fondoArticulo :#5A2A2A;
+    --textoColor:#DFDDDD ;
+    --colorEnlaces:#B8D9FF;
+}
 /* umiversal */
 *{
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 body {
-    background-color: #FFF8E7;
-    color: #330000;   
+    /* background-color:; */
+    background-color: var(--fondoBody);
+    color: var(--textoColor);   
     font-family: "Comics-neueTwo";     
 }
 
@@ -23,7 +67,13 @@ body {
  .headerBlog{
  display: flex;
  justify-content: space-between;
- background-color:#DFDDDD ;
+ background-color:var(--fondoContenido);
+    position: fixed;
+    margin: 0px 19px;
+    padding: 0px 10px;
+    width: 1350.83px;
+    border-radius: 12px;
+    outline:2px solid var(--textoColor)
 }
 
 .box.enlaces, .nav{
@@ -31,6 +81,7 @@ body {
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
+    color: var(--textoColor);
 }
 .headerEnlaces.DOS ,.headerEnlaces.TRES{
     margin:0px 10px ;
@@ -40,6 +91,22 @@ body {
     align-items: center;
 
 }
+
+#search-heard {
+  border-radius: 1pc;
+    background: var(--fondoBody);
+    border: 0pc;
+    color:var(--textoColor);
+    &:hove {
+        border-color: var(--textoColor);
+        
+    }
+}
+.opcion{
+    background-color: var(--fondoBody);
+}
+
+
 .label-search{
     margin-right: 5px;
 }
@@ -50,8 +117,9 @@ body {
 .headerEnlaces, .EnlacesBlog {
     font-family: "Comics-neueONE";
     text-decoration: none;
-
+    color: var(--colorEnlaces);
 }
+
 .titleHeader{
         font-size: 1.5em;
         margin: 15px 0px;
@@ -62,19 +130,120 @@ body {
     align-items: center;
 }
 
+
+
+[data-theme-toggle]{
+    display: flex;
+    align-items: center;
+    background: var(--fondoContenido);
+    border-radius: 28px;
+    border: 3px;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.15);
+        background-color: var(--fondoBody);
+        transition: 0.5s;
+    }
+     #modo-oscuro{
+    display: none;
+}
+    #modo-claro{
+        display: inline;
+    }
+
+}
+
+/* ==========================================================
+   CONTROL DE VISIBILIDAD DE ELEMENTOS DEL CAMBIO DE TEMA
+
+   Dependiendo del valor del atributo data-theme en el elemento
+   <html>, se muestran u ocultan elementos relacionados con
+   el cambio entre modo claro y modo oscuro.
+
+   Ejemplo:
+   <html data-theme="dark">
+
+   En modo oscuro:
+   - Se muestra el botón para cambiar al modo claro.
+   - Se ocultan elementos exclusivos del modo claro.
+========================================================== */
+/* ==========================================================
+   CONFIGURACIÓN PARA EL TEMA OSCURO
+
+   Cuando el sitio está en modo oscuro:
+   <html data-theme="dark">
+
+   Se muestran:
+   - #modo-oscuro
+   - #OcultarSectionNavWhite
+
+   Estos elementos pueden representar iconos o botones
+   relacionados con la apariencia oscura.
+========================================================== */
+[data-theme= "dark"] #modo-oscuro, [data-theme="dark"] #OcultarSectionNavWhite{
+    
+    /* Hace visible el elemento en modo oscuro */
+    display: inline;
+}
+
+/* ==========================================================
+   ELEMENTOS OCULTOS EN EL TEMA OSCURO
+
+   Cuando el sitio está en modo oscuro:
+   <html data-theme="dark">
+
+   Se ocultan:
+   - #modo-claro
+   - #OcultarSectionNav
+
+   Evita mostrar elementos que pertenecen al tema claro
+   cuando el usuario ya está utilizando el tema oscuro.
+========================================================== */
+[data-theme= "dark"] #modo-claro, [data-theme= "dark"] #OcultarSectionNav {
+    /* Oculta el elemento de la interfaz */
+    display: none;
+}
+#botonOcultarSectionNav{
+  background-color: var(--fondoContenido);  
+  border: 3px;  
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+    align-items: center;
+}
+
+#botonOcultarSectionNav:hover {
+    background-color: var(--fondoBody);
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+
+#OcultarSectionNavWhite{
+    display: none;
+}
+
+
 /* main */
 main {
     display: flex;
+    
 } 
 .nav.blog {
     flex-direction: column;
     margin-top: 21px;
     align-items: baseline;
 }
+
+.EnlacesBlog:hover, .headerEnlaces:hover{
+    text-decoration:underline 0.15em var(--textoColor);
+    transform: scale(1.15);
+    transition: text-decoration-color 300ms ease;
+ 
+}
 .contenido {
-    background:#DFDDDD ;
+    background:var(--fondoContenido);
     border-radius: 10px;
-        margin-top: 20px
+        margin-top: 69px
 }
 .contenido.principal{
     
@@ -83,16 +252,36 @@ main {
 .contenido.navegacion{
     display: none;
     margin-right: 20px;
+    transition: 0.5;
 }
 p {
     font-size: 19px;
-    margin:8px 155px ;
+    margin:8px ;
 }
 
 h2{
     font-size: 25px;
-    margin:8px 155px;
+    margin:8px ;
 }
 h1{
     margin: 5px 155px;
+}
+.Box.style{
+        background: var(--fondoArticulo);
+        margin: 10px 160px;
+    border-radius: 11px;
+}
+.MarcoDeImag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-blog{
+    border-radius: 7px;
+    width: 512px;
+
+}
+figcaption{
+    margin-top: 5px;
 }
