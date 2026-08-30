@@ -243,16 +243,18 @@ main {
 .contenido {
     background:var(--fondoContenido);
     border-radius: 10px;
-        margin-top: 69px
-}
-.contenido.principal{
-    
+        margin-top: 69px;
+     
+        
 }
 
+.contenido.principal{
+    padding: 7px 3px;
+}
 .contenido.navegacion{
-    display: none;
+   
     margin-right: 20px;
-    transition: 0.5;
+    
 }
 p {
     font-size: 19px;
@@ -270,6 +272,7 @@ h1{
         background: var(--fondoArticulo);
         margin: 10px 160px;
     border-radius: 11px;
+        padding: 7px 5px
 }
 .MarcoDeImag{
     display: flex;
@@ -285,3 +288,297 @@ h1{
 figcaption{
     margin-top: 5px;
 }
+.contenido.proximo {
+    margin-left: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content:normal;
+}
+.imag.proximo {
+    width: 90px;
+    height: 5pc;
+    border-radius: 12px;
+}
+
+.boxProximo div {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 4px;
+
+}
+.primerTexto{
+        margin-left: 195px;
+    margin-right: 195px;
+    font-size: 22px;
+}
+
+.proximo.text {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.titulo.proximo{
+        margin: 4px;
+        
+}
+.descripcion.proximo {
+    margin: 0px;
+    font-size: 90%;
+}
+
+.boxProximo :hover{
+    background: var(--fondoArticulo);
+    transition: 1.0s;
+    border-radius: 15px;
+}
+/* autor */
+.autoria{
+        display: flex;
+    background: var(--fondoArticulo);
+    border-radius: 25px; 
+    margin-top: 12px;
+}
+.imag-autor {
+    width: 120px;
+    border-radius: 12px;
+}
+.autor {
+    margin: 1pc 1pc;
+    padding: 10px 5px ;
+}
+
+
+.autor.persona{
+    display: flex;
+    flex-direction: column;
+}
+.autor.persona p {
+    font-size: 14px;
+    padding-right: 11px;
+    margin: 7px 5px;
+}
+/* footer */
+
+footer{
+    display: flex;
+    background-color: var(--fondoContenido);
+    color: var(--textoColor);
+    font-size: 20px;
+    flex-direction: column;
+     border-radius: 25px ; margin-top: 11px;
+}
+.footer-columna{
+    
+   
+     font-family:"Comics-neueTwo";
+     padding-bottom: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-enlaces{
+    display: flex;
+    flex-direction: column;
+    
+} 
+
+.footer-enlaces .enlaces {
+    margin-bottom: 11px;
+    text-decoration: none;
+    font-family:"Comics-neueONE";
+}
+.footer-enlaces:hover{
+    transform: scale(1.15);
+    text-decoration: underline red;
+}
+
+.footer-enlaces {
+    color:var(--textoColor);
+}
+
+.footer-enlaces{ 
+    color:white ;
+}
+.iconofooter{
+    width: 20px;
+    margin-bottom:-2px;
+}
+.columnaFooter.foto{
+    margin-left:25px;
+}
+/* medias queries */
+
+
+
+@media (min-width:321px) and (max-width: 470px) {
+    main {
+        display: flex;
+        flex-direction: column;
+            width: 449px;
+    }
+    h1 {
+    margin: 8px 10px;
+}
+ .contenido { 
+    margin-top: 24px;
+ } 
+ .contenido.navegacion {
+    margin-right: 0px;
+    margin-top: 71px;}
+    .Box.style {
+    margin:16px 21px ;
+    border-radius: 11px;
+    }
+    .contenido.proximo{
+            margin-left: 0px;
+    }
+    .img-blog {
+    border-radius: 7px;
+    width: 338px;}
+    .footer-columna{
+            display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+    .columnaFooter.foto{
+       margin-left: 0px;
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+}
+    
+    .footer-enlaces{
+        
+    display: flex;
+    flex-direction: row;
+        }
+    .footer-enlaces .enlaces {
+    margin-bottom: 11px;
+    text-decoration: none;
+    font-family: "Comics-neueONE";
+    font-size: 17px;}
+
+    footer{
+    width: 449px;
+    }
+    .primerTexto{
+    margin-left: 14px;
+    margin-right: 6px;
+    font-size: 20px;
+    }
+    #botonOcultarSectionNav{
+        display: none;
+    }
+    .headerBlog{
+        width: 449px;
+        margin: 0px -3px;
+        padding: 0px 3px;
+        justify-content: space-evenly;
+        position: static;
+    }
+    .box.search{
+        display: none;
+    }
+    .box.enlaces{
+        display: none;
+    }
+    .nav.blog{
+    margin-top: -5px;
+    }
+    .contenido.navegacion{
+        margin-top: 19px;
+
+    }
+
+} 
+
+@media (min-width: 471px) and (max-width: 480px){
+    main {
+        display: flex;
+        flex-direction: column;
+            width: 465px;
+    }
+    h1 {
+    margin: 8px 10px;
+}
+ .contenido { 
+    margin-top: 24px;
+ } 
+ .contenido.navegacion {
+    margin-right: 0px;
+    margin-top: 71px;}
+    .Box.style {
+    margin:16px 21px ;
+    border-radius: 11px;
+    }
+    .contenido.proximo{
+            margin-left: 0px;
+    }
+    .img-blog {
+    border-radius: 7px;
+    width: 338px;}
+    .footer-columna{
+            display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+    .columnaFooter.foto{
+       margin-left: 0px;
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+}
+    
+    .footer-enlaces{
+        
+    display: flex;
+    flex-direction: row;
+        }
+    .footer-enlaces .enlaces {
+    margin-bottom: 11px;
+    text-decoration: none;
+    font-family: "Comics-neueONE";
+    font-size: 17px;}
+
+    footer{
+    width: 465px;
+    }
+    .primerTexto{
+    margin-left: 14px;
+    margin-right: 6px;
+    font-size: 20px;
+    }
+    #botonOcultarSectionNav{
+        display: none;
+    }
+    .headerBlog{
+        width: 465px;
+        margin: 0px -3px;
+        padding: 0px 3px;
+        justify-content: space-evenly;
+        position: static;
+    }
+    .box.search{
+        display: none;
+    }
+    .box.enlaces{
+        display: none;
+    }
+    .nav.blog{
+    margin-top: -5px;
+    }
+    .contenido.navegacion{
+        margin-top: 19px;
+
+    }
+    
+}
+    

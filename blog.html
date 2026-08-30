@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/blog.css">
 </head>
 <body>
-    <Header class="headerBlog">
+    <header class="headerBlog">
         
         <div class="box logo">
             
@@ -23,12 +23,8 @@
         </div>
         <div class="box search">
             <label for="search-heard" class="label-search">Buscar:</label>
-            <input list="resultados" id="search-heard" size="30px" type="search" placeholder="Buscar aquí" pattern="[a-z]{1-12}">
-            <datalist id="resultados">
-               <option value="La importancia del tomate en la alimentación diaria"></option>
-               <option value="¿Cómo elegir un tomate fresco y de calidad?"></option>
-              <option value="Curiosidades del tomate que probablemente no conocías"></option>
-            </datalist>
+            <input id="search-heard" size="30px" type="search" placeholder="Buscar aquí">
+           
         </div>
         <div class="box image">
         <button aria-label data-theme-toggle>
@@ -50,26 +46,39 @@
                 Tomates de Temporada
              </a>
         </nav>
-    </Header>
+    </header>
 
     <main>
         
         <section class="contenido navegacion">
             <nav class="nav blog">
                 <h3>Los blog</h3>
-                <a href="" class="EnlacesBlog">La importancia del tomate en la alimentación diaria</a> <br>  
-                <a href="" class="EnlacesBlog">¿Cómo elegir un tomate fresco y de calidad?</a><br>
-                <a href="" class="EnlacesBlog">Curiosidades del tomate que probablemente no conocías </a><br>
+                <a href="#articuloUNO" class="EnlacesBlog">La importancia del tomate en la alimentación diaria</a> <br>  
+                <a href="#articuloDOS" class="EnlacesBlog">¿Cómo elegir un tomate fresco y de calidad?</a><br>
+                <a href="#articuloTRES" class="EnlacesBlog">Curiosidades del tomate que probablemente no conocías </a><br>
             </nav>
         </section>
         
         <section class="contenido principal">
-           <h1>Bienvenido al blog del Tomate.</h1>
-           <P style="margin-left: 155px; margin-right: 155px  ;">Aqui sabras de todo sobre el apacionante mundo del Tomate </P>
-            <br>
+            <div class="presentacionBlog">
+              <span  class="texto principal">
+                <h1>Bienvenido al blog del Tomate.</h1>
+                <br>
+                
+                <p class="primerTexto">Bienvenidos al Blog del Tomate, un espacio creado para conocer más sobre uno de los alimentos más importantes y utilizados en nuestra cocina.
+                <br>
+                <br>
+                Aquí encontrarás información interesante sobre el tomate, sus variedades, beneficios, formas de cultivo, curiosidades y diferentes maneras de utilizarlo en recetas y preparaciones.
+                <br>
+                <br>
+                 <strong>¡Gracias por visitarnos y bienvenido al Blog del Tomate! </strong> 
+                            <br>
+              </span>              
+            </div>        
+
             <article class="articulo">
                <div class="Box style">
-                <h2>La importancia del tomate en la alimentación diaria</h2>
+                <h2 id="articuloUNO" class="tituloArticulo">La importancia del tomate en la alimentación diaria</h2>
                 <p>El tomate es uno de los alimentos más consumidos en el mundo gracias a su versatilidad, sabor y valor nutricional. Puede disfrutarse fresco en ensaladas, cocinado en sopas, salsas o como ingrediente principal de innumerables recetas.</p>
                 <p>El tomate es uno de los alimentos más consumidos en el mundo gracias a su versatilidad, sabor y valor nutricional. Puede disfrutarse fresco en ensaladas, cocinado en sopas, salsas o como ingrediente principal de innumerables recetas.</p>
                 <figure class="MarcoDeImag">
@@ -82,9 +91,9 @@
                 <br>
                </div>
             </article>
-            <article class="articulo">
+            <article class="articulo Uno">
               <div class="Box style">
-                <h2>¿Cómo elegir un tomate fresco y de calidad?</h2>
+                <h2 id="articuloDOS" class="tituloArticulo">¿Cómo elegir un tomate fresco y de calidad?</h2>
                 <p>Escoger un buen tomate puede marcar la diferencia en el sabor de cualquier receta. Aunque todos parecen similares a simple vista, existen algunas características que permiten identificar un tomate fresco y de excelente calidad.</p>
                 <p>El primer aspecto a observar es el color. Un tomate maduro presenta un tono uniforme e intenso, sin manchas oscuras ni zonas verdes excesivas. También debe tener una piel lisa y brillante, libre de golpes o arrugas.</p>
                 <p>Al sostenerlo en la mano, debe sentirse firme pero ligeramente flexible al presionarlo con suavidad. Si está demasiado duro, probablemente aún no ha alcanzado su punto óptimo de maduración; si está demasiado blando, puede estar pasado.</p>
@@ -99,9 +108,9 @@
               </div> 
             </article>
 
-           <article class="articulo">
+           <article class="articulo DOS">
               <div class="Box style">
-                <h2>Curiosidades del tomate que probablemente no conocías</h2>
+                <h2 id="articuloTRES" class="tituloArticulo">Curiosidades del tomate que probablemente no conocías</h2>
                 <p>El tomate tiene una historia fascinante que va mucho más allá de la cocina. Aunque muchas personas lo consideran una verdura, desde el punto de vista botánico es una fruta, ya que se desarrolla a partir de la flor de la planta y contiene semillas.</p>
                 <p>Su origen se encuentra en América, donde era cultivado por pueblos indígenas mucho antes de llegar a Europa en el siglo XVI. Con el paso del tiempo, se convirtió en un ingrediente indispensable de la gastronomía de numerosos países.</p>
 
@@ -116,23 +125,51 @@
              </div>
             </article>
         </section>
-        <section class="contenido">
-            <!-- contenido anterior -->
+        <section class="contenido proximo">
+            <h2>Proximos Articulos</h2>
         </section>
     </main>
-
+     <div class="autoria">
+        
+     </div>
     <footer>
-        <div class="footer-contenido">
-            <!-- logo y frase -->
+        <div class="footer-columna">
+                
+            <div class="columnaFooter foto" >
+                <img src="./img/logo.png" alt="Tienda de tomate" width="200px">
+                <p style="margin-top: 13px ;"> Del campo a tu mesa,<br> con la mejor calidad <br> 
+                    y frescura.</p>
+            </div>
+            <div class="columnaFooter">
+                <h3>Enlaces</h3> 
+                <div class="footer-enlaces">
+                    <a class="enlaces"  href="./huerta.html">Nuestra Huerta</a> 
+                    <a class="enlaces"  href="./temporada.html">Tomates de Temporada</a> 
+                    <a class="enlaces" href="./regalo.html">Cestas de Regalo</a>
+                    <a class="enlaces"  href="./blog.html">El Blog del Tomate</a>  
+                </div>
+            
+            </div>
+            <div class="columnaFooter">
+                <h3>Contacto</h3>
+                <p><img class="iconofooter" src="img/ubicacion_blanco.png" alt="ubicación"> Sucursal Central, Santo Domingo</p>
+                <p><img class="iconofooter" src="img/telefono_blanco.png" alt="telefono"> (809) 000-0000</p>
+                <p><img class="iconofooter" src="img/correo_blanco.png" alt="correo electronico">contacto@tomatefresco.com</p>
+            </div>
+            <div class="columnaFooter" style="margin-right: 25px ;">
+                
+                <h3>Síguenos</h3>
+                <div class="footer-redes">
+                    <a href="#"><img src="./img/instagram_blanco.png" alt="Instagram" width="55px"></a>
+                    <a href="#"><img src="./img/facebook_blanco.png" alt="Facebook" width="55px"></a>
+                    <a href="#"><img src="img/WhatsApp_blanco.png" alt="WhatsApp" width="55px"></a>
+                </div>
+                
+            </div>
+        
         </div>
-        <div class="footer-contenido">
-            <!-- enlaces -->
-        </div>
-        <div class="footer-contenido">
-            <!-- contactos -->
-        </div>
-        <div class="footer-contenido">
-            <!-- redes sociales -->
+        <div class="footer-copy">
+            <p style="margin-top: 12px; margin-bottom: 12px;" >&copy; 2026 Tomate Fresco. Todos los derechos reservados.</p>
         </div>
     </footer>
 
